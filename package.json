@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "enigma.js": "^2.8.0",
+    "vue": "^2.6.14",
+    "ws": "^8.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

@@ -6,12 +6,24 @@
 </template>
 
 <script>
+import { fetchQlikResource, getEnigmaApp } from "@/services/qlik-service";
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+
   components: {
     HelloWorld
+  },
+
+  created() {
+    async function init() {
+      await fetchQlikResource();
+      const qlikApp = await getEnigmaApp();
+      console.log('qlikApp: ', qlikApp);
+    }
+
+    init();
   }
 }
 </script>
